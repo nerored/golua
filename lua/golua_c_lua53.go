@@ -167,6 +167,10 @@ func (L *State) ToNumber(index int) float64 {
 	return float64(C.lua_tonumberx(L.s, C.int(index), nil))
 }
 
+func (L *State) IsInteger(index int) bool {
+	return C.lua_isinteger(L.s, C.int(index)) == 1
+}
+
 // [lua_yield] -> [-?, +?, e]
 //
 // This function is equivalent to lua_yieldk, but it has no continuation (see §4.7). Therefore, when the thread resumes, it continues the function that called the function calling lua_yield.
