@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/aarzilli/golua/lua"
+	"github.com/nerored/golua/lua"
 	"fmt"
 )
 
